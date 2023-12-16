@@ -37,4 +37,5 @@ export interface IAutocompleteSelectCellEditorParameters<U extends PopupComponen
   selectData: Array<DataFormat> | ((parameters: IAutocompleteSelectCellEditorParameters<U>) => Array<DataFormat>)
   placeholder?: string
   required?: boolean
+  customFilter?: (label: string, match: string) => boolean
 }

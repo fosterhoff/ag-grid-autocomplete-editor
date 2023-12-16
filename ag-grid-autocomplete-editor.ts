@@ -85,6 +85,9 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
         const match = text.toLowerCase() || cellEditor.eInput.value.toLowerCase()
         callback(
           items.filter(function caseInsensitiveIncludes(n) {
+            if (parameters.customFilter) {
+              return parameters.customFilter(n.label.toLowerCase(), match)
+            }
             return n.label.toLowerCase().includes(match)
           })
         )
