@@ -77,7 +77,7 @@
     "@types/node": "14.14.41",
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
-    "ag-grid-autocomplete-editor": "file:./",
+    "fdhoffag-grid-autocomplete-editor": "file:./",
     "ag-grid-community": "^25.1.0",
     "autoprefixer": "10.2.5",
     "css-loader": "5.2.2",
