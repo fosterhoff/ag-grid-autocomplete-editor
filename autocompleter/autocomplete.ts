@@ -59,6 +59,7 @@ export default function autocomplete<T extends AutocompleteItem>(
     emptyMsg,
     render,
     renderGroup,
+    limit,
   } = settings
   const debounceWaitMs = settings.debounceWaitMs || 0
   const minimumInputLength = minLength
@@ -194,7 +195,7 @@ export default function autocomplete<T extends AutocompleteItem>(
     // Clear all child from container
     removeChildren(container)
 
-    const items = getItems()
+    const items = getItems().slice(0, limit)
     const fragment = renderItems<T>(items, getSelected(), getInputValue(), itemClickHandler, render, renderGroup)
     container.append(fragment)
     if (items.length === 0 && strict) {

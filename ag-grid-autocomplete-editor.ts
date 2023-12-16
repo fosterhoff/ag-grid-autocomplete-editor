@@ -71,6 +71,7 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
       },
       className: 'ag-cell-editor-autocomplete',
       minLength: 1,
+      limit: 100,
       emptyMsg: 'None',
       strict: true,
       autoselectfirst: true,
@@ -146,6 +147,7 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
         return autocompleteParameters.renderGroup(this, name, currentValue)
       },
       className: autocompleteParameters.className,
+      limit: autocompleteParameters.limit,
       minLength: autocompleteParameters.minLength,
       emptyMsg: autocompleteParameters.emptyMsg,
       strict: autocompleteParameters.strict,
