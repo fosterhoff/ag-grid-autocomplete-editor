@@ -15,6 +15,7 @@ export interface AutocompleteSettings<T extends AutocompleteItem> {
   render?: RenderFunction<T>
   renderGroup?: RenderGroupFunction
   className?: string
+  limit?: number
   minLength?: number
   emptyMsg?: string
   strict: boolean
