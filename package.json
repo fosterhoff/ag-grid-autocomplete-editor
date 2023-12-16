@@ -1,5 +1,5 @@
 {
-  "name": "ag-grid-autocomplete-editor",
+  "name": "fosterhoff-ag-grid-autocomplete-editor",
   "version": "0.0.0-development",
   "description": "Quick implementation of autocompletion into ag-Grid cell using autocompleter package.",
   "deprecated": false,
