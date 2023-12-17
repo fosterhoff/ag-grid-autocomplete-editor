@@ -89,7 +89,9 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
             if (parameters.customFilter) {
               return parameters.customFilter(n.label.toLowerCase(), match)
             }
-            return n.label.toLowerCase().includes(match)
+            // return n.label.toLowerCase().includes(match)
+            const lower = n.label.toLowerCase();
+            return match.split(" ").every(word => lower.includes(word))
           })
         )
       },
