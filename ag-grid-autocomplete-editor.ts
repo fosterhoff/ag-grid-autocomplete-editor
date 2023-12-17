@@ -32,12 +32,14 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
   private static getSelectData(
     parameters: IAutocompleteSelectCellEditorParameters<AutocompleteSelectCellEditor>
   ): Array<DataFormat> {
+    if (!parameters.selectData) {
+      return [];
+    }
     if (typeof parameters.selectData === 'function') {
       return parameters.selectData(parameters)
     }
-
     if (Array.isArray(parameters.selectData)) {
-      return parameters.selectData as Array<DataFormat>
+      return parameters.selectData.map((value) => ({value, label: value})) as Array<DataFormat>
     }
     return []
   }
