@@ -75,7 +75,6 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
       minLength: 1,
       limit: 100,
       emptyMsg: 'None',
-      strict: true,
       autoselectfirst: true,
       onFreeTextSelect() {},
       onSelect(cellEditor, item: DataFormat | undefined) {
@@ -155,7 +154,6 @@ export default class AutocompleteSelectCellEditor extends PopupComponent impleme
       limit: autocompleteParameters.limit,
       minLength: autocompleteParameters.minLength,
       emptyMsg: autocompleteParameters.emptyMsg,
-      strict: autocompleteParameters.strict,
       autoselectfirst: autocompleteParameters.autoselectfirst,
       showOnFocus: autocompleteParameters.showOnFocus,
       onFreeTextSelect: (item: DataFormat, input: HTMLInputElement) => {

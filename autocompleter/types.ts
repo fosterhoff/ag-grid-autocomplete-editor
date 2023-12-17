@@ -18,7 +18,6 @@ export interface AutocompleteSettings<T extends AutocompleteItem> {
   limit?: number
   minLength?: number
   emptyMsg?: string
-  strict: boolean
   autoselectfirst: boolean
   onFreeTextSelect?: (item: T, input: HTMLInputElement) => void
   onSelect: (item: T | undefined, input: HTMLInputElement, event: KeyboardEvent | MouseEvent) => void
