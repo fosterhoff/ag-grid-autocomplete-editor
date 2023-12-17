@@ -48,7 +48,6 @@ export default function autocomplete<T extends AutocompleteItem>(
   /* eslint-enable */
 
   const {
-    strict,
     autoselectfirst,
     onFreeTextSelect,
     minLength = DEFAULT_MIN_LENGTH,
@@ -198,7 +197,7 @@ export default function autocomplete<T extends AutocompleteItem>(
     const items = getItems().slice(0, limit)
     const fragment = renderItems<T>(items, getSelected(), getInputValue(), itemClickHandler, render, renderGroup)
     container.append(fragment)
-    if (items.length === 0 && strict) {
+    /*if (items.length === 0 && strict) {
       // if no items display empty message
       if (emptyMsg) {
         const empty = document.createElement('div')
@@ -211,7 +210,7 @@ export default function autocomplete<T extends AutocompleteItem>(
         clear()
         return
       }
-    }
+    }*/
 
     attach()
     updatePosition()
@@ -350,9 +349,10 @@ export default function autocomplete<T extends AutocompleteItem>(
 
   function handleSelectKeysDown(event: KeyboardEvent) {
     const selected = getSelected()
+    /*
     if (strict) {
       settings.onSelect(selected, input, event)
-    } else {
+    } else {*/
       const freeTextSelect = { label: input.value } as T
       if (selected) {
         settings.onSelect(selected, input, event)
@@ -362,7 +362,7 @@ export default function autocomplete<T extends AutocompleteItem>(
         onFreeTextSelect(freeTextSelect, input)
       }
       settings.onSelect(freeTextSelect, input, event)
-    }
+    //}
     clear()
   }
 

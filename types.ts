@@ -15,7 +15,6 @@ export interface IAutocompleterSettings<T extends AutocompleteItem, U extends Po
   className?: string
   minLength?: number
   emptyMsg?: string
-  strict?: boolean
   limit?: number
   autoselectfirst?: boolean
   onFreeTextSelect?: (cellEditor: U, item: T, input: HTMLInputElement) => void
